@@ -1,0 +1,192 @@
+/* الألوان الأساسية */
+:root {
+  --orange: #f57c00;
+  --orange-light: #ffe0b2;
+  --dark: #333;
+}
+
+/* القسم البطولي */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../../../assets/logoin.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* العناوين */
+.section-title {
+  display: inline-block;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--orange);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bg-orange .section-title:after {
+  background-color: white;
+}
+
+/* الخط الزمني */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--orange);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-left: 30px;
+}
+
+/* الإنجازات */
+.achievement-badge {
+  display: inline-block;
+  background-color: var(--orange);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+/* الفريق */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--orange);
+}
+
+/* الأنشطة */
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-list li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.activity-date {
+  background-color: var(--orange);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.activity-content {
+  flex-grow: 1;
+}
+
+/* كيفية الانضمام */
+.join-step {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* متجاوب */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 300px;
+  }
+  
+  .display-4 {
+    font-size: 2.2rem;
+  }
+  
+  .section-title:after {
+    width: 30px;
+  }
+  
+  .team-card img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .activity-list li {
+    flex-direction: column;
+  }
+  
+  .activity-date {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

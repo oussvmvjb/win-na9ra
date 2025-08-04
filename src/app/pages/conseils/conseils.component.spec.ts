@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ConseilsComponent } from './conseils.component';
+
+describe('ConseilsComponent', () => {
+  let component: ConseilsComponent;
+  let fixture: ComponentFixture<ConseilsComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ConseilsComponent]
+    });
+    fixture = TestBed.createComponent(ConseilsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

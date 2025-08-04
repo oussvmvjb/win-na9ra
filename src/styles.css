@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --orange: #f57c00;  /* اللون البرتقالي الأساسي */
+  --orange-light: #ffe0b2;  /* درجة فاتحة من البرتقالي */
+}
+
+/* تعريف كلاس text-orange */
+.text-orange {
+  color: var(--orange) !important;
+}
+
+/* تعريف كلاس bg-orange للخلفيات */
+.bg-orange {
+  background-color: var(--orange) !important;
+}
+
+/* تعريف كلاس border-orange للحدود */
+.border-orange {
+  border-color: var(--orange) !important;
+}

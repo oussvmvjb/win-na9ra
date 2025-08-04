@@ -1,0 +1,9 @@
+<ng-container *ngIf="!isIntroPage">
+  <app-navbar></app-navbar>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="!isIntroPage">
+  <app-footer></app-footer>
+</ng-container>

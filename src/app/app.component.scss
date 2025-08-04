@@ -1,0 +1,40 @@
+$text-dark: #222;
+$orange: #ff6600;
+$white: #fff;
+$black: #000;
+
+body {
+  background-color: $white;
+  color: $text-dark;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ألوان خاصة */
+.text-orange {
+  color: $orange !important;
+}
+
+.border-orange {
+  border-color: $orange !important;
+}
+
+.btn-orange {
+  background-color: $orange;
+  border-color: $orange;
+  color: $white;
+}
+
+.btn-orange:hover {
+  background-color: darken($orange, 10%);
+  border-color: darken($orange, 10%);
+}
+
+/* بطاقات */
+.card {
+  background-color: #f9f9f9;
+}
+
+/* عناوين */
+h1, h2, h3 {
+  font-weight: 700;
+}

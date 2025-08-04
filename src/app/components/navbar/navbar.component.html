@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="stars-background">
+    <app-stars-background></app-stars-background>
+  </div>
+
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" style="margin-right: auto;"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">
+            <i class="bi bi-house-fill"></i> الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/iset" routerLinkActive="active">
+            <i class="bi bi-mortarboard-fill"></i> ISET
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/beja" routerLinkActive="active">
+            <i class="bi bi-geo-alt-fill"></i> باجة
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/conseils" routerLinkActive="active">
+            <i class="bi bi-lightbulb-fill"></i> نصائح
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/enactus" routerLinkActive="active">
+            <i class="bi bi-people-fill"></i> Enactus
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/galerie" routerLinkActive="active">
+            <i class="bi bi-images"></i> المعرض
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">
+            <i class="bi bi-envelope-fill"></i> تواصل
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+   <a class="navbar-brand position-absolute top-50 start-50 translate-middle" routerLink="/">
+      <img src="../../../assets/logo2.png" alt="Win Na9ra Logo" width="80" height="40">
+    </a>
+    
+ 
+      <a class="navbar-brand ms-auto d-flex " style="margin-right: 0;" routerLink="/">
+        <img src="../../../assets/inac.png" alt="Win Na9ra Logo" width="40" height="40">
+      </a>
+    
+  </div>
+
+</nav>
+
+<!-- القائمة الجانبية للهواتف -->
+<div class="sidebar" [class.open]="menuOpen" *ngIf="isSmallScreen">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <img src="assets/logo1.png" alt="Win Na9ra Logo" width="100" height="100">
+    <a class="close-btn" (click)="toggleMenu()" style="margin-left: 10px;">×</a>
+  </div>
+  <a routerLink="/home" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-house-fill"></i> الرئيسية</a>
+  <a routerLink="/iset" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-mortarboard-fill"></i> ISET</a>
+  <a routerLink="/beja" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-geo-alt-fill"></i> باجة</a>
+  <a routerLink="/conseils" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-lightbulb-fill"></i> نصائح</a>  
+  <a routerLink="/enactus" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-people-fill"></i> Enactus</a>
+  <a routerLink="/galerie" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-images"></i> المعرض</a>
+
+  <a routerLink="/contact" (click)="toggleMenu()" routerLinkActive="active"><i class="bi bi-envelope-fill"></i> تواصل</a>
+</div>
+
+<!-- خلفية داكنة عند فتح القائمة -->
+<div class="overlay" *ngIf="menuOpen && isSmallScreen" (click)="toggleMenu()"></div>
